@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Projects by Lam James Akol: Nylo, Zatride, Zatzi, Wordle AI Solver and this portfolio website.">
+<meta name="author" content="Lam James Akol">
+<title>Projects | Lam James Akol</title>
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-bs-theme',t);}catch(e){}</script>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="visually-hidden" id="themeAnnouncement" aria-live="polite"></div>
+<div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">LA</span>Lam James Akol</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" title="Toggle navigation">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">About me</a></li>
+              <li><a class="dropdown-item" href="about.html#reflection">Reflection</a></li>
+              <li><a class="dropdown-item" href="about.html#ai-acknowledgement">AI use acknowledgement</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="work-experience.html">Experience</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="projects.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="projects.html">All projects</a></li>
+              <li><a class="dropdown-item" href="projects.html#evidence">Evidence</a></li>
+              <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="nylo.html">Nylo</a></li>
+            <li><a class="dropdown-item" href="zatride.html">Zatride</a></li>
+            <li><a class="dropdown-item" href="zatzi.html">Zatzi</a></li>
+            <li><a class="dropdown-item" href="wordle-ai-solver.html">Wordle AI Solver</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <section class="page-head">
+    <div class="container">
+      
+      <p class="eyebrow">Portfolio</p>
+      <h1>Projects</h1>
+      <p class="lead-custom">Products I've designed and built, and academic work. Filter by the kind of work you're interested in.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar" role="group" aria-label="Filter projects">
+        <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false">AI and data</button>
+        <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+        <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter-btn" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+        <button class="filter-btn" type="button" data-filter="academic" aria-pressed="false">Academic</button>
+      </div>
+      <p class="visually-hidden" id="filterStatus" aria-live="polite"></p>
+      <!-- To add a project: copy one .project-col block below and change its content.
+           data-category takes any of: ai mobile web backend academic -->
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 project-col reveal" data-category="ai web mobile" data-delay="0">
+          <article class="card project-card">
+            <div class="project-plate" aria-hidden="true">
+              <i class="plate-icon fa-solid fa-graduation-cap"></i>
+              <span class="plate-code">EdTech · South Sudan</span>
+              <span class="plate-mark">Ny</span>
+            </div>
+            <div class="card-body">
+              <div class="project-meta"><span class="status-pill">In development</span></div>
+              <h3 class="card-title">Nylo</h3>
+              <p class="card-text">A curriculum-aligned learning platform for pupils from Primary 1 to Senior 4, with an AI study assistant and separate portals for students, parents, teachers and the Ministry of Education.</p>
+              <div class="skill-tags"><span class="chip">NLP</span><span class="chip">Adaptive learning</span><span class="chip">Role-based access</span><span class="chip">Gamification</span></div>
+              <a class="card-link-arrow stretched-link" href="nylo.html">Read the case study<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 project-col reveal" data-category="mobile backend" data-delay="1">
+          <article class="card project-card">
+            <div class="project-plate" aria-hidden="true">
+              <i class="plate-icon fa-solid fa-motorcycle"></i>
+              <span class="plate-code">Mobility · Juba</span>
+              <span class="plate-mark">Zr</span>
+            </div>
+            <div class="card-body">
+              <div class="project-meta"><span class="status-pill">Prototype built</span></div>
+              <h3 class="card-title">Zatride</h3>
+              <p class="card-text">Ride-hailing for Juba across cars, bodabodas and tuk-tuks, with pricing in South Sudanese pounds, mobile-money payments and landmark-based pickup.</p>
+              <div class="skill-tags"><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">Socket.io</span><span class="chip">Flutter</span></div>
+              <a class="card-link-arrow stretched-link" href="zatride.html">Read the case study<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 project-col reveal" data-category="web backend ai" data-delay="2">
+          <article class="card project-card">
+            <div class="project-plate" aria-hidden="true">
+              <i class="plate-icon fa-solid fa-seedling"></i>
+              <span class="plate-code">AgriTech · SS &amp; ZA</span>
+              <span class="plate-mark">Zz</span>
+            </div>
+            <div class="card-body">
+              <div class="project-meta"><span class="status-pill">Backend near production</span></div>
+              <h3 class="card-title">Zatzi</h3>
+              <p class="card-text">An advisory web app for smallholder farmers in South Sudan and South Africa, on a Supabase backend hardened for production use.</p>
+              <div class="skill-tags"><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">Sentry</span><span class="chip">Rate limiting</span></div>
+              <a class="card-link-arrow stretched-link" href="zatzi.html">Read the case study<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 project-col reveal" data-category="ai academic" data-delay="0">
+          <article class="card project-card">
+            <div class="project-plate" aria-hidden="true">
+              <i class="plate-icon fa-solid fa-table-cells"></i>
+              <span class="plate-code">CS21002 · Group of 4</span>
+              <span class="plate-mark">Wd</span>
+            </div>
+            <div class="card-body">
+              <div class="project-meta"><span class="status-pill">Submitted Oct 2026</span></div>
+              <h3 class="card-title">Wordle AI Solver</h3>
+              <p class="card-text">A university group project comparing a search-based solver with a machine-learning approach to Wordle. I built the game state tracker.</p>
+              <div class="skill-tags"><span class="chip">Python</span><span class="chip">Search</span><span class="chip">Machine learning</span><span class="chip">Regex</span></div>
+              <a class="card-link-arrow stretched-link" href="wordle-ai-solver.html">Read the case study<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 project-col reveal" data-category="web academic" data-delay="1">
+          <article class="card project-card">
+            <div class="project-plate" aria-hidden="true">
+              <i class="plate-icon fa-solid fa-code"></i>
+              <span class="plate-code">Web · CS21001</span>
+              <span class="plate-mark">Pf</span>
+            </div>
+            <div class="card-body">
+              <div class="project-meta"><span class="status-pill">Live</span></div>
+              <h3 class="card-title">This portfolio website</h3>
+              <p class="card-text">Eleven pages of semantic HTML, a custom design system over Bootstrap 5, and vanilla JavaScript for theming, filtering and form handling. Deployed on GitHub Pages.</p>
+              <div class="skill-tags"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Bootstrap 5</span><span class="chip">JavaScript</span></div>
+              <a class="card-link-arrow stretched-link" href="https://github.com/itsnotlambo" target="_blank" rel="noopener noreferrer">View on GitHub<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="evidence" aria-labelledby="evidence-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Evidence</p>
+        <h2 id="evidence-heading">How the systems fit together</h2>
+        <p>Architecture diagrams for three projects, drawn from each project's design. Each case study explains the decisions behind them.</p>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <h3 class="h5 mb-0">Zatride: real-time ride-hailing</h3>
+          <figure class="diagram">
+  <div class="diagram-frame">
+    <svg viewBox="0 0 770 360" role="img" aria-label="Zatride architecture: rider, driver and admin clients talk to a Node.js API over REST and Socket.io; the API keeps durable records in MongoDB, live trip state in Redis, and charges fares through MTN and Zain Cash." xmlns="http://www.w3.org/2000/svg"><rect class="dg-box " x="20" y="30" width="170" height="64" rx="6"/><text class="dg-title" x="105.0" y="58.0" text-anchor="middle">Rider app</text><text class="dg-sub" x="105.0" y="75.0" text-anchor="middle">Flutter · 33 screens</text><rect class="dg-box " x="20" y="148" width="170" height="64" rx="6"/><text class="dg-title" x="105.0" y="176.0" text-anchor="middle">Driver app</text><text class="dg-sub" x="105.0" y="193.0" text-anchor="middle">Flutter · 24 screens</text><rect class="dg-box " x="20" y="266" width="170" height="64" rx="6"/><text class="dg-title" x="105.0" y="294.0" text-anchor="middle">Admin dashboard</text><text class="dg-sub" x="105.0" y="311.0" text-anchor="middle">Web · 18 pages</text><polyline class="dg-line" points="190,62 215,62 215,298 190,298"/><line class="dg-line" x1="190" y1="180" x2="215" y2="180"/><rect class="dg-box " x="330" y="110" width="160" height="140" rx="6"/><text class="dg-title" x="410.0" y="168.0" text-anchor="middle">API server</text><text class="dg-sub" x="410.0" y="185.0" text-anchor="middle">Node.js · Express</text><text class="dg-sub" x="410.0" y="200.0" text-anchor="middle">trip state machine</text><polyline class="dg-line" points="215,150 330,150"/><polygon class="dg-head" points="330,150 322,145.5 322,154.5"/><text class="dg-label" x="272" y="140" text-anchor="middle">REST</text><polyline class="dg-line hl" points="215,210 330,210"/><polygon class="dg-head hl" points="330,210 322,205.5 322,214.5"/><polygon class="dg-head hl" points="215,210 223,205.5 223,214.5"/><text class="dg-label hl" x="272" y="186" text-anchor="middle">Socket.io</text><text class="dg-label hl" x="272" y="199" text-anchor="middle">live trips</text><rect class="dg-box " x="590" y="30" width="160" height="64" rx="6"/><text class="dg-title" x="670.0" y="58.0" text-anchor="middle">MongoDB</text><text class="dg-sub" x="670.0" y="75.0" text-anchor="middle">users · trips · fares</text><rect class="dg-box hl" x="590" y="148" width="160" height="64" rx="6"/><text class="dg-title" x="670.0" y="168.0" text-anchor="middle">Redis</text><text class="dg-sub" x="670.0" y="185.0" text-anchor="middle">live positions</text><text class="dg-sub" x="670.0" y="200.0" text-anchor="middle">active trip state</text><rect class="dg-box ext" x="590" y="266" width="160" height="64" rx="6"/><text class="dg-title" x="670.0" y="294.0" text-anchor="middle">Mobile money</text><text class="dg-sub" x="670.0" y="311.0" text-anchor="middle">MTN · Zain Cash</text><polyline class="dg-line" points="490,140 540,140 540,62 590,62"/><polygon class="dg-head" points="590,62 582,57.5 582,66.5"/><text class="dg-label" x="546" y="100" text-anchor="start">durable</text><polyline class="dg-line hl" points="490,180 590,180"/><polygon class="dg-head hl" points="590,180 582,175.5 582,184.5"/><text class="dg-label hl" x="540" y="170" text-anchor="middle">live state</text><polyline class="dg-line" points="490,220 540,220 540,298 590,298"/><polygon class="dg-head" points="590,298 582,293.5 582,302.5"/><text class="dg-label" x="546" y="262" text-anchor="start">fares in SSP</text></svg>
+  </div>
+  <figcaption>Zatride architecture. Bookings and payments go over REST; live trips go over Socket.io (gold), with Redis holding positions and active trip state so MongoDB only stores durable records. Mobile money is an external service (dashed).</figcaption>
+</figure>
+          <h3 class="h5 mt-5 mb-0">Zatzi: a backend hardened for production</h3>
+          <figure class="diagram">
+  <div class="diagram-frame">
+    <svg viewBox="0 0 770 320" role="img" aria-label="Zatzi backend: web and iOS clients pass through rate limiting to atomic Postgres RPC functions on Supabase; errors and structured logs go to Sentry." xmlns="http://www.w3.org/2000/svg"><rect class="dg-box " x="20" y="50" width="150" height="64" rx="6"/><text class="dg-title" x="95.0" y="78.0" text-anchor="middle">Web app</text><text class="dg-sub" x="95.0" y="95.0" text-anchor="middle">farmers · advisors</text><rect class="dg-box " x="20" y="176" width="150" height="64" rx="6"/><text class="dg-title" x="95.0" y="204.0" text-anchor="middle">iOS app</text><text class="dg-sub" x="95.0" y="221.0" text-anchor="middle">Apple in-app purchase</text><polyline class="dg-line" points="170,82 195,82 195,208 170,208"/><rect class="dg-box " x="250" y="100" width="150" height="90" rx="6"/><text class="dg-title" x="325.0" y="141.0" text-anchor="middle">Rate limiting</text><text class="dg-sub" x="325.0" y="158.0" text-anchor="middle">per user and IP</text><polyline class="dg-line" points="195,145 250,145"/><polygon class="dg-head" points="250,145 242,140.5 242,149.5"/><text class="dg-label" x="222" y="135" text-anchor="middle">calls</text><rect class="dg-box hl" x="450" y="100" width="150" height="90" rx="6"/><text class="dg-title" x="525.0" y="133.0" text-anchor="middle">Atomic RPC</text><text class="dg-sub" x="525.0" y="150.0" text-anchor="middle">Postgres functions</text><text class="dg-sub" x="525.0" y="165.0" text-anchor="middle">all or nothing</text><polyline class="dg-line hl" points="400,145 450,145"/><polygon class="dg-head hl" points="450,145 442,140.5 442,149.5"/><rect class="dg-box " x="640" y="100" width="110" height="90" rx="6"/><text class="dg-title" x="695.0" y="141.0" text-anchor="middle">PostgreSQL</text><text class="dg-sub" x="695.0" y="158.0" text-anchor="middle">Supabase</text><polyline class="dg-line hl" points="600,145 640,145"/><polygon class="dg-head hl" points="640,145 632,140.5 632,149.5"/><rect class="dg-box ext" x="450" y="250" width="150" height="56" rx="6"/><text class="dg-title" x="525.0" y="274.0" text-anchor="middle">Sentry</text><text class="dg-sub" x="525.0" y="291.0" text-anchor="middle">errors · traces</text><polyline class="dg-line" points="325,190 325,278 450,278"/><polygon class="dg-head" points="450,278 442,273.5 442,282.5"/><text class="dg-label" x="333" y="268" text-anchor="start">structured logs</text><polyline class="dg-line" points="525,190 525,250"/><polygon class="dg-head" points="525,250 520.5,242 529.5,242"/></svg>
+  </div>
+  <figcaption>Zatzi backend. Every request passes rate limiting before it reaches the database, and writes that touch several tables run as single all-or-nothing Postgres functions (gold). Logs and errors go to Sentry (dashed, external).</figcaption>
+</figure>
+          <h3 class="h5 mt-5 mb-0">Wordle AI Solver: the state tracker I built</h3>
+          <figure class="diagram">
+  <div class="diagram-frame">
+    <svg viewBox="0 0 770 300" role="img" aria-label="Wordle solver loop: each guess produces feedback, the state tracker records what is known, a regular expression filters the 616-word dictionary, and a search or machine-learning solver picks the next guess." xmlns="http://www.w3.org/2000/svg"><rect class="dg-box " x="20" y="60" width="120" height="64" rx="6"/><text class="dg-title" x="80.0" y="88.0" text-anchor="middle">Guess</text><text class="dg-sub" x="80.0" y="105.0" text-anchor="middle">5-letter word</text><rect class="dg-box " x="185" y="60" width="130" height="64" rx="6"/><text class="dg-title" x="250.0" y="88.0" text-anchor="middle">Feedback</text><text class="dg-sub" x="250.0" y="105.0" text-anchor="middle">colour per letter</text><polyline class="dg-line" points="140,92 185,92"/><polygon class="dg-head" points="185,92 177,87.5 177,96.5"/><rect class="dg-box hl" x="360" y="30" width="190" height="124" rx="6"/><text class="dg-title" x="455" y="56" text-anchor="middle">State tracker</text><text class="dg-sub" x="455" y="82" text-anchor="middle">fixed letters by position</text><text class="dg-sub" x="455" y="102" text-anchor="middle">letters in the wrong spot</text><text class="dg-sub" x="455" y="122" text-anchor="middle">letters ruled out</text><text class="dg-label hl" x="455" y="174" text-anchor="middle">my section</text><polyline class="dg-line hl" points="315,92 360,92"/><polygon class="dg-head hl" points="360,92 352,87.5 352,96.5"/><rect class="dg-box " x="600" y="60" width="150" height="64" rx="6"/><text class="dg-title" x="675.0" y="88.0" text-anchor="middle">Regex filter</text><text class="dg-sub" x="675.0" y="105.0" text-anchor="middle">616-word dictionary</text><polyline class="dg-line hl" points="550,92 600,92"/><polygon class="dg-head hl" points="600,92 592,87.5 592,96.5"/><rect class="dg-box " x="600" y="214" width="150" height="64" rx="6"/><text class="dg-title" x="675.0" y="242.0" text-anchor="middle">Solver</text><text class="dg-sub" x="675.0" y="259.0" text-anchor="middle">search or ML</text><polyline class="dg-line" points="675,124 675,214"/><polygon class="dg-head" points="675,214 670.5,206 679.5,206"/><text class="dg-label" x="685" y="172" text-anchor="start">candidates</text><polyline class="dg-line" points="600,246 80,246 80,124"/><polygon class="dg-head" points="80,124 75.5,132 84.5,132"/><text class="dg-label" x="340" y="236" text-anchor="middle">next guess</text></svg>
+  </div>
+  <figcaption>How the Wordle solver loops. My section, the state tracker (gold), turns each round of feedback into a regular expression that filters the dictionary, so both solvers work from the same candidate list.</figcaption>
+</figure>
+        </div>
+        <div class="col-lg-4">
+          <dl class="evidence-note case-facts">
+            <dt>What these are</dt>
+            <dd>Diagrams of each system's design, drawn for this portfolio. They are illustrations, not screenshots of running software.</dd>
+            <dt>Source code</dt>
+            <dd>Zatride and Zatzi are in private repositories. The Wordle solver is in my university group's private repository; the diagram shows only my section.</dd>
+            <dt>More on GitHub</dt>
+            <dd><a href="https://github.com/itsnotlambo" target="_blank" rel="noopener noreferrer">github.com/itsnotlambo</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="eyebrow">Open to 2027 placements and internships</p>
+          <h2 class="mb-0">Building something for a market most teams overlook? I'd like to hear about it.</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-gold" href="contact.html"><i class="fa-solid fa-paper-plane me-2" aria-hidden="true"></i>Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-5">
+        <p class="footer-name mb-1">Lam James Akol</p>
+        <p class="text-muted-custom mb-1">Computer Science (Data Science &amp; AI), University of Dundee</p>
+        <p class="text-muted-custom mb-0"><i class="fa-solid fa-location-dot me-2" aria-hidden="true"></i>Dundee, Scotland</p>
+      </div>
+      <div class="col-md-4">
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="work-experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="social-links justify-content-md-end">
+          <a href="https://www.linkedin.com/in/lam-james-akol-zakayo-65b657388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/itsnotlambo" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="contact.html" aria-label="Contact page" title="Contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span id="year">2026</span> Lam James Akol. All rights reserved.</span>
+      <span>lamjamesakol@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

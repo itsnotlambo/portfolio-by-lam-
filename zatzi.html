@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Case study: Zatzi. An advisory web app for smallholder farmers in South Sudan and South Africa, on a Supabase backend hardened for production use.">
+<meta name="author" content="Lam James Akol">
+<title>Zatzi case study | Lam James Akol</title>
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-bs-theme',t);}catch(e){}</script>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="visually-hidden" id="themeAnnouncement" aria-live="polite"></div>
+<div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">LA</span>Lam James Akol</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" title="Toggle navigation">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">About me</a></li>
+              <li><a class="dropdown-item" href="about.html#reflection">Reflection</a></li>
+              <li><a class="dropdown-item" href="about.html#ai-acknowledgement">AI use acknowledgement</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="work-experience.html">Experience</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="projects.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="projects.html">All projects</a></li>
+              <li><a class="dropdown-item" href="projects.html#evidence">Evidence</a></li>
+              <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="nylo.html">Nylo</a></li>
+            <li><a class="dropdown-item" href="zatride.html">Zatride</a></li>
+            <li><a class="dropdown-item" href="zatzi.html">Zatzi</a></li>
+            <li><a class="dropdown-item" href="wordle-ai-solver.html">Wordle AI Solver</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <section class="page-head">
+    <div class="container">
+      <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="projects.html">Projects</a></li><li class="breadcrumb-item active" aria-current="page">Zatzi</li></ol></nav>
+      <p class="eyebrow">Case study · AgriTech · SS &amp; ZA</p>
+      <h1>Zatzi</h1>
+      <p class="lead-custom">Advisory software for smallholder farmers, on a backend built to survive real-world use.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 order-lg-2">
+          <aside class="case-facts" aria-label="Project facts">
+            <dl class="mb-3"><dt>Role</dt><dd>Full-stack developer</dd><dt>Markets</dt><dd>South Sudan and South Africa</dd><dt>Stack</dt><dd>Supabase, PostgreSQL, Sentry, Apple IAP</dd><dt>Status</dt><dd>Backend about 95% production-ready</dd></dl>
+            <div class="skill-tags mb-0"><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">Sentry</span><span class="chip">Rate limiting</span></div>
+          </aside>
+        </div>
+        <div class="col-lg-8 order-lg-1 case-body">
+
+          <h2>Overview</h2>
+          <p>Zatzi is an agricultural advisory web app for smallholder farmers in South Sudan and South Africa. Most of my work on it has gone into a backend that can be trusted in production.</p>
+
+          <h2>Backend hardening</h2>
+          <p>The backend runs on Supabase (PostgreSQL) and is roughly 95% of the way to production readiness:</p>
+          <ul>
+            <li><strong>Atomic RPC functions</strong> for operations that update several tables at once and must never half-complete.</li>
+            <li><strong>Rate limiting</strong> to protect the AI and database layers from abuse and runaway costs.</li>
+            <li><strong>Structured logging and Sentry</strong> so errors in the field can be traced, not guessed at.</li>
+            <li><strong>Apple in-app purchase</strong> handling for the iOS version.</li>
+          </ul>
+
+<figure class="diagram">
+  <div class="diagram-frame">
+    <svg viewBox="0 0 770 320" role="img" aria-label="Zatzi backend: web and iOS clients pass through rate limiting to atomic Postgres RPC functions on Supabase; errors and structured logs go to Sentry." xmlns="http://www.w3.org/2000/svg"><rect class="dg-box " x="20" y="50" width="150" height="64" rx="6"/><text class="dg-title" x="95.0" y="78.0" text-anchor="middle">Web app</text><text class="dg-sub" x="95.0" y="95.0" text-anchor="middle">farmers · advisors</text><rect class="dg-box " x="20" y="176" width="150" height="64" rx="6"/><text class="dg-title" x="95.0" y="204.0" text-anchor="middle">iOS app</text><text class="dg-sub" x="95.0" y="221.0" text-anchor="middle">Apple in-app purchase</text><polyline class="dg-line" points="170,82 195,82 195,208 170,208"/><rect class="dg-box " x="250" y="100" width="150" height="90" rx="6"/><text class="dg-title" x="325.0" y="141.0" text-anchor="middle">Rate limiting</text><text class="dg-sub" x="325.0" y="158.0" text-anchor="middle">per user and IP</text><polyline class="dg-line" points="195,145 250,145"/><polygon class="dg-head" points="250,145 242,140.5 242,149.5"/><text class="dg-label" x="222" y="135" text-anchor="middle">calls</text><rect class="dg-box hl" x="450" y="100" width="150" height="90" rx="6"/><text class="dg-title" x="525.0" y="133.0" text-anchor="middle">Atomic RPC</text><text class="dg-sub" x="525.0" y="150.0" text-anchor="middle">Postgres functions</text><text class="dg-sub" x="525.0" y="165.0" text-anchor="middle">all or nothing</text><polyline class="dg-line hl" points="400,145 450,145"/><polygon class="dg-head hl" points="450,145 442,140.5 442,149.5"/><rect class="dg-box " x="640" y="100" width="110" height="90" rx="6"/><text class="dg-title" x="695.0" y="141.0" text-anchor="middle">PostgreSQL</text><text class="dg-sub" x="695.0" y="158.0" text-anchor="middle">Supabase</text><polyline class="dg-line hl" points="600,145 640,145"/><polygon class="dg-head hl" points="640,145 632,140.5 632,149.5"/><rect class="dg-box ext" x="450" y="250" width="150" height="56" rx="6"/><text class="dg-title" x="525.0" y="274.0" text-anchor="middle">Sentry</text><text class="dg-sub" x="525.0" y="291.0" text-anchor="middle">errors · traces</text><polyline class="dg-line" points="325,190 325,278 450,278"/><polygon class="dg-head" points="450,278 442,273.5 442,282.5"/><text class="dg-label" x="333" y="268" text-anchor="start">structured logs</text><polyline class="dg-line" points="525,190 525,250"/><polygon class="dg-head" points="525,250 520.5,242 529.5,242"/></svg>
+  </div>
+  <figcaption>Zatzi backend. Every request passes rate limiting before it reaches the database, and writes that touch several tables run as single all-or-nothing Postgres functions (gold). Logs and errors go to Sentry (dashed, external).</figcaption>
+</figure>
+
+          <h2>The open question: who is the customer?</h2>
+          <div class="callout">
+            <p>The hardest decision on Zatzi isn't technical. As a consumer app it competes directly with plant-identification apps like PictureThis and Plantix. As a business-to-government or agricultural-organisation platform, it sells to fewer, larger customers with different needs. The backend supports either, but the product, pricing and roadmap don't.</p>
+          </div>
+          <p>I'm resolving this before building further features, because building for both would make it weaker at each.</p>
+
+          <h2>Status and next steps</h2>
+          <p>Backend near production. Next: settle the positioning, then run a small pilot with farmers to measure whether the advice changes decisions.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-5">
+    <div class="container">
+      <nav class="case-nav" aria-label="More case studies">
+        <a href="zatride.html"><span class="dir"><i class="fa-solid fa-arrow-left me-2" aria-hidden="true"></i>Previous</span><div class="ttl">Zatride</div></a>
+        <a href="wordle-ai-solver.html"><span class="dir">Next<i class="fa-solid fa-arrow-right ms-2" aria-hidden="true"></i></span><div class="ttl">Wordle AI Solver</div></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="eyebrow">Open to 2027 placements and internships</p>
+          <h2 class="mb-0">Building something for a market most teams overlook? I'd like to hear about it.</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-gold" href="contact.html"><i class="fa-solid fa-paper-plane me-2" aria-hidden="true"></i>Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-5">
+        <p class="footer-name mb-1">Lam James Akol</p>
+        <p class="text-muted-custom mb-1">Computer Science (Data Science &amp; AI), University of Dundee</p>
+        <p class="text-muted-custom mb-0"><i class="fa-solid fa-location-dot me-2" aria-hidden="true"></i>Dundee, Scotland</p>
+      </div>
+      <div class="col-md-4">
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="work-experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="social-links justify-content-md-end">
+          <a href="https://www.linkedin.com/in/lam-james-akol-zakayo-65b657388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/itsnotlambo" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="contact.html" aria-label="Contact page" title="Contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span id="year">2026</span> Lam James Akol. All rights reserved.</span>
+      <span>lamjamesakol@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

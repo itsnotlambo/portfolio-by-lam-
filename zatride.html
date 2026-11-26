@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Case study: Zatride. Ride-hailing for Juba across cars, bodabodas and tuk-tuks, with pricing in South Sudanese pounds, mobile-money payments and landmark-based pickup.">
+<meta name="author" content="Lam James Akol">
+<title>Zatride case study | Lam James Akol</title>
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-bs-theme',t);}catch(e){}</script>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="visually-hidden" id="themeAnnouncement" aria-live="polite"></div>
+<div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">LA</span>Lam James Akol</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" title="Toggle navigation">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">About me</a></li>
+              <li><a class="dropdown-item" href="about.html#reflection">Reflection</a></li>
+              <li><a class="dropdown-item" href="about.html#ai-acknowledgement">AI use acknowledgement</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="work-experience.html">Experience</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="projects.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="projects.html">All projects</a></li>
+              <li><a class="dropdown-item" href="projects.html#evidence">Evidence</a></li>
+              <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="nylo.html">Nylo</a></li>
+            <li><a class="dropdown-item" href="zatride.html">Zatride</a></li>
+            <li><a class="dropdown-item" href="zatzi.html">Zatzi</a></li>
+            <li><a class="dropdown-item" href="wordle-ai-solver.html">Wordle AI Solver</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <section class="page-head">
+    <div class="container">
+      <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="projects.html">Projects</a></li><li class="breadcrumb-item active" aria-current="page">Zatride</li></ol></nav>
+      <p class="eyebrow">Case study · Mobility · Juba</p>
+      <h1>Zatride</h1>
+      <p class="lead-custom">Ride-hailing designed around how Juba actually moves: landmarks instead of addresses, mobile money instead of cards, and bodabodas alongside cars.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 order-lg-2">
+          <aside class="case-facts" aria-label="Project facts">
+            <dl class="mb-3"><dt>Role</dt><dd>Founder; architecture, backend and mobile</dd><dt>Market</dt><dd>Juba, South Sudan</dd><dt>Stack</dt><dd>Node.js, Express, MongoDB, Redis, Socket.io, Flutter</dd><dt>Scope</dt><dd>75 screens and pages across 3 surfaces</dd><dt>Status</dt><dd>Prototype built</dd></dl>
+            <div class="skill-tags mb-0"><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">Socket.io</span><span class="chip">Flutter</span></div>
+          </aside>
+        </div>
+        <div class="col-lg-8 order-lg-1 case-body">
+
+          <h2>Overview</h2>
+          <p>Zatride is a ride-hailing platform for Juba covering the three ways people actually get around the city: cars, bodabodas (motorbike taxis) and tuk-tuks. It has a rider app, a driver app and an admin dashboard on a shared real-time backend.</p>
+
+          <h2>The problem</h2>
+          <p>International ride-hailing apps assume things that don't hold in Juba. Street addresses are not how people describe where they are. Most people pay with mobile money, not cards. And a bodaboda and a car are different products at very different prices, not one category.</p>
+
+          <h2>Design decisions</h2>
+          <ul>
+            <li><strong>Landmark-based pickup.</strong> Riders choose a known landmark rather than typing an address, because that is how directions are given in Juba.</li>
+            <li><strong>Mobile money.</strong> Payment through MTN and Zain Cash, with pricing in South Sudanese pounds (SSP).</li>
+            <li><strong>Three vehicle types.</strong> Cars, bodabodas and tuk-tuks are priced and dispatched separately.</li>
+            <li><strong>Real-time by default.</strong> Socket.io carries trip state between rider, driver and dashboard, with Redis holding live state so the database is not hit on every update.</li>
+          </ul>
+
+          <h2>Architecture</h2>
+<figure class="diagram">
+  <div class="diagram-frame">
+    <svg viewBox="0 0 770 360" role="img" aria-label="Zatride architecture: rider, driver and admin clients talk to a Node.js API over REST and Socket.io; the API keeps durable records in MongoDB, live trip state in Redis, and charges fares through MTN and Zain Cash." xmlns="http://www.w3.org/2000/svg"><rect class="dg-box " x="20" y="30" width="170" height="64" rx="6"/><text class="dg-title" x="105.0" y="58.0" text-anchor="middle">Rider app</text><text class="dg-sub" x="105.0" y="75.0" text-anchor="middle">Flutter · 33 screens</text><rect class="dg-box " x="20" y="148" width="170" height="64" rx="6"/><text class="dg-title" x="105.0" y="176.0" text-anchor="middle">Driver app</text><text class="dg-sub" x="105.0" y="193.0" text-anchor="middle">Flutter · 24 screens</text><rect class="dg-box " x="20" y="266" width="170" height="64" rx="6"/><text class="dg-title" x="105.0" y="294.0" text-anchor="middle">Admin dashboard</text><text class="dg-sub" x="105.0" y="311.0" text-anchor="middle">Web · 18 pages</text><polyline class="dg-line" points="190,62 215,62 215,298 190,298"/><line class="dg-line" x1="190" y1="180" x2="215" y2="180"/><rect class="dg-box " x="330" y="110" width="160" height="140" rx="6"/><text class="dg-title" x="410.0" y="168.0" text-anchor="middle">API server</text><text class="dg-sub" x="410.0" y="185.0" text-anchor="middle">Node.js · Express</text><text class="dg-sub" x="410.0" y="200.0" text-anchor="middle">trip state machine</text><polyline class="dg-line" points="215,150 330,150"/><polygon class="dg-head" points="330,150 322,145.5 322,154.5"/><text class="dg-label" x="272" y="140" text-anchor="middle">REST</text><polyline class="dg-line hl" points="215,210 330,210"/><polygon class="dg-head hl" points="330,210 322,205.5 322,214.5"/><polygon class="dg-head hl" points="215,210 223,205.5 223,214.5"/><text class="dg-label hl" x="272" y="186" text-anchor="middle">Socket.io</text><text class="dg-label hl" x="272" y="199" text-anchor="middle">live trips</text><rect class="dg-box " x="590" y="30" width="160" height="64" rx="6"/><text class="dg-title" x="670.0" y="58.0" text-anchor="middle">MongoDB</text><text class="dg-sub" x="670.0" y="75.0" text-anchor="middle">users · trips · fares</text><rect class="dg-box hl" x="590" y="148" width="160" height="64" rx="6"/><text class="dg-title" x="670.0" y="168.0" text-anchor="middle">Redis</text><text class="dg-sub" x="670.0" y="185.0" text-anchor="middle">live positions</text><text class="dg-sub" x="670.0" y="200.0" text-anchor="middle">active trip state</text><rect class="dg-box ext" x="590" y="266" width="160" height="64" rx="6"/><text class="dg-title" x="670.0" y="294.0" text-anchor="middle">Mobile money</text><text class="dg-sub" x="670.0" y="311.0" text-anchor="middle">MTN · Zain Cash</text><polyline class="dg-line" points="490,140 540,140 540,62 590,62"/><polygon class="dg-head" points="590,62 582,57.5 582,66.5"/><text class="dg-label" x="546" y="100" text-anchor="start">durable</text><polyline class="dg-line hl" points="490,180 590,180"/><polygon class="dg-head hl" points="590,180 582,175.5 582,184.5"/><text class="dg-label hl" x="540" y="170" text-anchor="middle">live state</text><polyline class="dg-line" points="490,220 540,220 540,298 590,298"/><polygon class="dg-head" points="590,298 582,293.5 582,302.5"/><text class="dg-label" x="546" y="262" text-anchor="start">fares in SSP</text></svg>
+  </div>
+  <figcaption>Zatride architecture. Bookings and payments go over REST; live trips go over Socket.io (gold), with Redis holding positions and active trip state so MongoDB only stores durable records. Mobile money is an external service (dashed).</figcaption>
+</figure>
+
+          <h2>Scope</h2>
+          <div class="table-scroll">
+            <table class="spec-table">
+              <thead><tr><th scope="col">Surface</th><th scope="col">Size</th><th scope="col">Built with</th></tr></thead>
+              <tbody>
+                <tr><td>Rider app</td><td>33 screens</td><td>Flutter</td></tr>
+                <tr><td>Driver app</td><td>24 screens</td><td>Flutter</td></tr>
+                <tr><td>Admin dashboard</td><td>18 pages</td><td>Web</td></tr>
+                <tr><td>Backend</td><td>REST and real-time API</td><td>Node.js, Express, MongoDB, Redis, Socket.io</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>How I built it</h2>
+          <p>I defined the architecture, the data model and the full screen inventory, then used AI coding tools (Claude Code) to generate and iterate the implementation. My job was the decisions an AI tool can't make: what the product must assume, how trips move through their states, and reviewing what was produced.</p>
+
+          <h2>Status and next steps</h2>
+          <p>A full prototype and backend are built. Next: field testing with drivers in Juba, and integrating the live MTN and Zain Cash payment APIs.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-5">
+    <div class="container">
+      <nav class="case-nav" aria-label="More case studies">
+        <a href="nylo.html"><span class="dir"><i class="fa-solid fa-arrow-left me-2" aria-hidden="true"></i>Previous</span><div class="ttl">Nylo</div></a>
+        <a href="zatzi.html"><span class="dir">Next<i class="fa-solid fa-arrow-right ms-2" aria-hidden="true"></i></span><div class="ttl">Zatzi</div></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <p class="eyebrow">Open to 2027 placements and internships</p>
+          <h2 class="mb-0">Building something for a market most teams overlook? I'd like to hear about it.</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-gold" href="contact.html"><i class="fa-solid fa-paper-plane me-2" aria-hidden="true"></i>Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-5">
+        <p class="footer-name mb-1">Lam James Akol</p>
+        <p class="text-muted-custom mb-1">Computer Science (Data Science &amp; AI), University of Dundee</p>
+        <p class="text-muted-custom mb-0"><i class="fa-solid fa-location-dot me-2" aria-hidden="true"></i>Dundee, Scotland</p>
+      </div>
+      <div class="col-md-4">
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="work-experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="social-links justify-content-md-end">
+          <a href="https://www.linkedin.com/in/lam-james-akol-zakayo-65b657388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/itsnotlambo" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="contact.html" aria-label="Contact page" title="Contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; <span id="year">2026</span> Lam James Akol. All rights reserved.</span>
+      <span>lamjamesakol@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
