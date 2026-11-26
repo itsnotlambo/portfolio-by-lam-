@@ -24,7 +24,7 @@ This index says what evidence the portfolio contains for each project, where it 
 
 ## Personal portfolio website
 - Source: this repository (`css/`, `js/`, and the HTML pages).
-- Validation: see `Requirements Table.md` for the validator and Lighthouse results once recorded.
+- Validation: all pages pass html-validate; see `ASSESSMENT-CHECKLIST.md` for the status against the brief.
 
 ## AI use
 See `AI-USE-ACKNOWLEDGEMENT.md`.
