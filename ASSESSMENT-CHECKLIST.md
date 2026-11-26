@@ -26,7 +26,7 @@
 | Transferable skills with examples | `skills.html` | Done |
 | CV downloadable as PDF | `cv.html` links to `assets/Lam_James_Akol_CV.pdf` | Done |
 | Links to professional profiles | GitHub and LinkedIn in the footer, contact and CV pages | Done |
-| Copy of the job advert (saved offline, not a link) | To be added to `assets/` and linked from the CV page | To do |
+| Copy of the job advert (saved offline, not a link) | `assets/Lloyds_Software_Engineer_Industrial_Placement_Job_Advert.pdf`, linked from `cv.html` | Done |
 
 ## 3. Presentation and professionalism
 
