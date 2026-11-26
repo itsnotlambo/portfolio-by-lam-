@@ -73,3 +73,7 @@ Open `index.html` in a browser. Internet access is only needed for Google Fonts;
 ## AI use
 
 See [`AI-USE-ACKNOWLEDGEMENT.md`](AI-USE-ACKNOWLEDGEMENT.md).
+
+## Deployment note
+
+A `.nojekyll` file is included so GitHub Pages serves the site files exactly as they are, without Jekyll processing the folders.
